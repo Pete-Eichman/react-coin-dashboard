@@ -8,7 +8,7 @@ class TestComponent extends Component{
         <div>
           <h1>{value.name.toString()}</h1>
           <h2>${value.price_usd.toString()}</h2>
-          
+
         </div>
       );
     })
