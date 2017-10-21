@@ -5,6 +5,8 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-fetch": "0.0.9",
+    "react-google-charts": "^1.5.5",
     "react-scripts": "1.0.14"
   },
   "scripts": {
