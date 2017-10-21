@@ -1,5 +1,6 @@
 import { Chart } from 'react-google-charts';
 import React from 'react';
+import TestComponent from './TestComponent';
 
 class ExampleChart extends React.Component {
   constructor(props) {
@@ -311,7 +312,19 @@ class ExampleChart extends React.Component {
     };
   }
   render() {
+
+    const coin = Object.entries(this.props).map(([key,value])=>{
+      return (
+        <div>
+          <h1>{value.name.toString()}</h1>
+          <h2>${value.price_usd.toString()}</h2>
+
+        </div>
+      );
+    })
+
     return (
+      <div>
       <Chart
         chartType="LineChart"
         data={this.state.data}
@@ -321,7 +334,12 @@ class ExampleChart extends React.Component {
         height="400px"
         legend_toggle
       />
+
+        {coin}
+      </div>
     );
   }
+
+
 }
 export default ExampleChart;
